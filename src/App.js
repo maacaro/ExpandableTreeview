@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import Tree from './components/expandable-treeview/TreeView.js'
+import Tree from './components/TreeView/TreeView.js';
+
 class App extends Component {
+  data = {
+    folderA:{
+      fileOne:"File 1",
+      fileTwo:"File 2"
+    },
+     fileThree:"File 3"
+  };
+
   render() {
-    const fileStructure = {
-      folderA:{
-        fileOne:"File 1",
-        fileTwo:"File 2"
-      },
-       fileThree:"File 3"
-     };
-     
-      return  <Tree data={fileStructure}  />;
+      return  <Tree data={this.data} />;
   }
 }
 

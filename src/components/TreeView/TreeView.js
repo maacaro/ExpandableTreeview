@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import SubTree from './SubTree.js';
 
 class Tree extends React.Component{
-  state = {
-   isExpanded: (new Map(): Map<string, boolean>)
- }
+
  render(){
      const {data} = this.props;
 
@@ -17,8 +15,6 @@ class Tree extends React.Component{
                         key
                         item = {key}
                         data = {data[key]}
-                        onClick = {() => this.toggle(key)}
-                        isExpanded={!!this.state.isExpanded.get(key)}
                         index={index}
                         />
                        )

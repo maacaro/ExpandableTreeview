@@ -50,9 +50,9 @@ describe('rendering',()=>{
             data = {'some data'}
             index={'index'}
             />);
-        const list = subTree.find('span');
-        list.simulate('onClick');
-        const tree = list.find('Tree');
+            const clickableTag = subTree.find('span');
+            clickableTag.simulate('click');
+            const tree = subTree.find('Tree');
       
     expect(tree).toHaveLength(0);
     });
