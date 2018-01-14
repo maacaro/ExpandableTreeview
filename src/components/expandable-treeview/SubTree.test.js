@@ -42,3 +42,18 @@ describe('rendering',()=>{
     });
 
   });
+  describe('the behavior',()=>{
+    it('should collapse the tree on cick',()=>{
+        const subTree = shallow(<SubTree
+            key={1}
+            item = {'item'}
+            data = {'some data'}
+            index={'index'}
+            />);
+        const list = subTree.find('span');
+        list.simulate('onClick');
+        const tree = list.find('Tree');
+      
+    expect(tree).toHaveLength(0);
+    });
+  });
