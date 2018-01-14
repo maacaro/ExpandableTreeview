@@ -43,7 +43,7 @@ describe('rendering',()=>{
 
   });
   describe('the behavior',()=>{
-    it('should collapse the tree on cick',()=>{
+    it('should collapse the tree at onClick',()=>{
         const subTree = shallow(<SubTree
             key={1}
             item = {'item'}
